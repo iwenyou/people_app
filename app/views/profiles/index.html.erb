@@ -1,0 +1,13 @@
+<div ng-app="app">
+  <div ng-controller="profileCtrl">
+    <h1>Profile List:</h1>
+
+    <div id="profiles">
+      <div ng-repeat="profile in profiles track by $index">
+        <p ng-onclick="show($index)">{{ profile.name }}</p>
+        <p>{{ profile.bio }}</p>
+      </div>
+    </div>
+
+  </div>
+</div>
