@@ -28,8 +28,17 @@ var people = [
 
     $scope.profiles = people;
 
+    $scope.addProfile = function(name, bio){
+      var newPorfile = {
+        name: name,
+        bio: bio,
+        bioVisible: false
+      };
+      $scope.profiles.push(newPorfile);
+    };
+
     $scope.changeStatus = function(index){
-      if
+      person.bioVisible = !profile.bioVisible;
     };
 
   });

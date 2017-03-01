@@ -3,10 +3,15 @@
     <h1>Profile List:</h1>
 
     <div id="profiles">
-      <div ng-repeat="profile in profiles track by $index">
-        <p ng-onclick="show($index)">{{ profile.name }}</p>
-        <p>{{ profile.bio }}</p>
+      <div ng-repeat="profile in profiles">
+        <p ng-onclick="changeStatus(profile)">{{ profile.name }}</p>
+        <p ng-if="profile.bioVisible">{{ profile.bio }}</p>
       </div>
+
+      <h3>New Profile:</h3>
+      Person Name: <input ng-model="newProfileName">
+      Person Bio: <input ng-model="newProfileBio">
+      <button ng-click="addProfile">submit</button>
     </div>
 
   </div>
